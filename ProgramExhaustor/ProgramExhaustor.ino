@@ -5,7 +5,7 @@
 // Set the LCD address to 0x27 for a 16 chars and 2 line display
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-//Initialize program variables
+//Initializare variabile de program
 long unsigned int timer1_acc,timer1_dn, timer1_preset,timer1_ON,  timer2_acc,timer2_dn, timer2_preset,timer2_ON,  timer3_acc,timer3_dn, timer3_preset,timer3_ON;
 int state,motorCmd,ev1Cmd,ev2Cmd,ev3Cmd,ev4Cmd,setupCount,startCount,stopCount,startVar;
 
@@ -16,7 +16,7 @@ ezButton stopBtn(4);
 
 void setup() {
   
-//initialize LCD
+//initializare LCD
   lcd.backlight();
   lcd.begin();
   lastDisplay=0;
@@ -136,12 +136,12 @@ else
 
 
 void loop() {
-  //start button loop reading
+  //Inintializare citire valori butoane
 setupBtn.loop();
 startBtn.loop();
 stopBtn.loop();
 
-//Button command actions
+//Actiuni pe baza butoanelor
 setupCount=setupBtn.getCount();
 if(startBtn.getState()==0)
 startVar=1;
